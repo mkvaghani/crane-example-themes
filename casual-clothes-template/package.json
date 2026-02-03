@@ -1,0 +1,45 @@
+{
+  "name": "casual-clothes-template",
+  "private": true,
+  "version": "0.0.59",
+  "scripts": {
+    "lint": "npx eslint --ext .js,.ts,.vue --fix",
+    "type-check": "vue-tsc --noEmit",
+    "build": "npx @lightspeed/crane@latest build",
+    "preview": "npx @lightspeed/crane@latest preview",
+    "deploy": "npx @lightspeed/crane@latest deploy",
+    "release": "standard-version --path ."
+  },
+  "dependencies": {
+    "@lightspeed/crane": "^2.0.3",
+    "@lightspeed/ecom-headless": "^1.1.2",
+    "@lightspeed/crane-api": "1.0.2",
+    "@lightspeed/eslint-config-crane": "^1.1.3",
+    "@vueuse/core": "^14.1.0",
+    "vite": "^7.3.0",
+    "vue": "^3.5.26"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "overrides": {
+    "glob": "^9.3.5",
+    "stylus": "^0.63.0",
+    "axios-concurrency": {
+      "axios": "^1.13.2"
+    }
+  },
+  "devDependencies": {
+    "@vue/eslint-config-typescript": "^14.6.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-unused-imports": "^4.3.0",
+    "eslint-plugin-vue": "^10.6.2",
+    "prettier": "^3.7.4",
+    "sass": "^1.96.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.8"
+  }
+}

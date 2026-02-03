@@ -1,0 +1,28 @@
+<template>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		:width="width"
+		:height="height"
+		viewBox="0 0 10 6"
+		aria-hidden="true">
+		<path
+			fill-rule="evenodd"
+			clip-rule="evenodd"
+			d="M0.0996215 0.68767C0.256443 0.47204 0.542485 0.437079 0.738512 0.609584L5 4.35969L9.26149 0.609584C9.45751 0.437079 9.74356 0.47204 9.90038 0.68767C10.0572 0.9033 10.0254 1.21795 9.82939 1.39045L5.28395 5.39043C5.11794 5.53652 4.88206 5.53652 4.71605 5.39043L0.170609 1.39045C-0.0254182 1.21795 -0.0572005 0.9033 0.0996215 0.68767Z"
+			:fill="color" />
+	</svg>
+</template>
+
+<script setup lang="ts">
+interface Props {
+  color?: string
+  width?: number | string
+  height?: number | string
+}
+
+withDefaults(defineProps<Props>(), {
+	color: 'currentColor',
+	width: 10,
+	height: 6,
+})
+</script>

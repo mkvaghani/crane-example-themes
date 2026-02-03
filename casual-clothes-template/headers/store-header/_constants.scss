@@ -1,0 +1,18 @@
+/**
+ * Z-Index Layers
+ * Note: FullScreenOverlay uses 9999, so we need to be higher
+ */
+$Z_INDEX_CATALOG_OVERLAY: 10000;
+$Z_INDEX_CATALOG_CONTENT: 10001;
+
+/**
+ * Layout Positions
+ */
+$CATALOG_SUBMENU_TOP_OFFSET: 118px;
+
+/**
+ * Breakpoints
+ */
+$MOBILE_STORE_HEADER_BREAKPOINT: 992px;
+$MOBILE_MAX_WIDTH: 768px;
+

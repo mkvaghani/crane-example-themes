@@ -1,0 +1,38 @@
+name: 'Validate Theme'
+description: 'Validates a Crane theme by running type-check, lint, and build'
+
+inputs:
+  working-directory:
+    description: 'Path to the theme directory'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+        cache-dependency-path: ${{ inputs.working-directory }}/package-lock.json
+
+    - name: Install dependencies
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: npm ci
+
+    - name: Type check
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: npm run type-check
+
+    - name: Lint
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: npm run lint
+
+    - name: Build
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: npm run build
+
